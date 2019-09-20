@@ -15,6 +15,6 @@ class P23Test {
     final var list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
     var result = P23.rnd_select(list, 3);
     System.out.println(result);
-    assertEquals(5, result.size());
+    assertEquals(3, result.size());
   }
 }

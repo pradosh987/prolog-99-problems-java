@@ -14,6 +14,8 @@ class P20Test {
   @Test
   void remoteAt() {
     final var list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
-    assertEquals(Arrays.asList(1, 2, 3, 4, 6, 7, 8), P20.remoteAt(list, 5));
+    var result = P20.removeAt(list, 5);
+    assertEquals(5, result[0]);
+    assertEquals(Arrays.asList(1, 2, 3, 4, 6, 7, 8), result[1]);
   }
 }
