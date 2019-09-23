@@ -13,7 +13,7 @@ class P11Test {
 
   @Test
   void cleanEncode() {
-    var list = P10.encode(P09.zipConsecutive(Arrays.asList(1, 1, 1, 1, 2, 3, 3, 4, 4, 5, 6, 6, 6, 6)));
+    var list = P10.encode(Arrays.asList(1, 1, 1, 1, 2, 3, 3, 4, 4, 5, 6, 6, 6, 6));
     var expected = Arrays.asList(new AbstractMap.SimpleEntry<>(4, 1), 2,
         new AbstractMap.SimpleEntry<>(2, 3), new AbstractMap.SimpleEntry<>(2, 4), 5,
         new AbstractMap.SimpleEntry<>(4, 6));
