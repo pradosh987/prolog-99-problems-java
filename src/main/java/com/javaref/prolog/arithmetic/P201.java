@@ -8,7 +8,6 @@ public class P201 {
       return true;
     }
     int upperbound = (int) Math.round(Math.sqrt(number));
-    System.out.println(upperbound);
     return !IntStream.rangeClosed(2, upperbound).anyMatch(i -> number % i == 0);
   }
 }
