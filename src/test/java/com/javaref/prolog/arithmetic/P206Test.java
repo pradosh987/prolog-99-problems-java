@@ -7,7 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class P206Test {
 
   @Test
-  void goldbach_list() {
-    P206.goldbach_list(9, 20);
+  void goldbachList() {
+    P206.goldbachList(9, 20);
+  }
+
+  @Test
+  void goldbachListLarge() {
+    assertEquals(4, P206.goldbachListLarge(1, 2000, 50));
   }
 }
