@@ -22,5 +22,5 @@ public class P402 {
     }
     return tree;
   }
- 
+
 }
