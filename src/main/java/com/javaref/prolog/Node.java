@@ -1,5 +1,7 @@
 package com.javaref.prolog;
 
+import java.util.Objects;
+
 public class Node<T> {
   private T value;
   private Node left;
@@ -65,5 +67,20 @@ public class Node<T> {
   public String toString() {
     return "T(" + value + ", " + (hasLeft() ? getLeft() : "null") + ","
         + (hasRight() ? getRight() : "null") + ")";
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Node<?> node = (Node<?>) o;
+    return getValue().equals(node.getValue()) &&
+        Objects.equals(getLeft(), node.getLeft()) &&
+        Objects.equals(getRight(), node.getRight());
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(getValue(), getLeft(), getRight());
   }
 }
